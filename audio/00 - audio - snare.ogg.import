@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://blbkqecg2ap72"
+path="res://.godot/imported/00 - audio - snare.ogg-6e4ee0fda3837c0e37e56acbd00bdefa.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/00 - audio - snare.ogg"
+dest_files=["res://.godot/imported/00 - audio - snare.ogg-6e4ee0fda3837c0e37e56acbd00bdefa.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

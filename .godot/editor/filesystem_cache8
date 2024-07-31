@@ -1,0 +1,18 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1722461138
+audiointer_player.gd::GDScript::-1::1722448042::0::1::::AudioInterPlayer<>AudioStreamPlayer<>::
+audiosync_player.gd::GDScript::-1::1722448720::0::1::::AudioSyncPlayer<>AudioStreamPlayer<>::
+audio_player.tscn::PackedScene::1391212911570504706::1722461138::0::1::::<><>::uid://dsgn7m0dfwaxo::::res://audio/00 - audio - bass.ogg<>res://audio_player.gd<>uid://d33hx0nrostss::::res://audio/00 - audio - Full.ogg<>uid://cd7y8d0ev76gp::::res://audio/00 - audio - guitar.ogg<>res://control.gd<>uid://c3ri5lw3wejdo::::res://audio/00 - audio - GuitarLess.ogg<>uid://un23akfyekmk::::res://audio/00 - audio - hh.ogg<>uid://blbkqecg2ap72::::res://audio/00 - audio - snare.ogg<>uid://dywjvtfcf11sd::::res://audio/00 - audio - kick.ogg<>res://audiosync_player.gd<>res://audiointer_player.gd<>uid://lwklvhg35mw4::::res://audio/00 - audio - Drumless.ogg
+control.gd::GDScript::-1::1722445587::0::1::::<>Control<>::
+default_bus_layout.tres::AudioBusLayout::6062081012838972521::1722445835::0::1::::<><>::
+icon.svg::CompressedTexture2D::6856256397763239593::1722439150::1722439159::1::::<><>::
+audio_player.gd::GDScript::-1::1722448776::0::1::::<>Node<>::
+::res://audio/::1722446368
+00 - audio - bass.ogg::AudioStreamOggVorbis::8435894638443331004::1722444641::1722446368::1::::<><>::
+00 - audio - Drumless.ogg::AudioStreamOggVorbis::818121518383497449::1722444641::1722461170::1::::<><>::
+00 - audio - Full.ogg::AudioStreamOggVorbis::9182819676225113490::1722444641::1722461166::1::::<><>::
+00 - audio - guitar.ogg::AudioStreamOggVorbis::5050984321856728167::1722444641::1722446365::1::::<><>::
+00 - audio - GuitarLess.ogg::AudioStreamOggVorbis::6773763333873711384::1722444641::1722461183::1::::<><>::
+00 - audio - hh.ogg::AudioStreamOggVorbis::1432303160304918922::1722444642::1722446358::1::::<><>::
+00 - audio - kick.ogg::AudioStreamOggVorbis::8889795569354576367::1722444641::1722446354::1::::<><>::
+00 - audio - snare.ogg::AudioStreamOggVorbis::3161198297587381511::1722444642::1722446362::1::::<><>::

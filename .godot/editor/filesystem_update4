@@ -1,0 +1,6 @@
+res://audio_player.gd
+res://audio_player.tscn
+res://control.gd
+res://default_bus_layout.tres
+res://audiosync_player.gd
+res://audiointer_player.gd

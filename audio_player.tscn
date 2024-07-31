@@ -1,0 +1,216 @@
+[gd_scene load_steps=15 format=3 uid="uid://t26cq3yet7bi"]
+
+[ext_resource type="AudioStream" uid="uid://dsgn7m0dfwaxo" path="res://audio/00 - audio - bass.ogg" id="1_dgvfe"]
+[ext_resource type="Script" path="res://audio_player.gd" id="1_jdgbb"]
+[ext_resource type="AudioStream" uid="uid://d33hx0nrostss" path="res://audio/00 - audio - Full.ogg" id="1_y40j1"]
+[ext_resource type="AudioStream" uid="uid://cd7y8d0ev76gp" path="res://audio/00 - audio - guitar.ogg" id="2_phn63"]
+[ext_resource type="Script" path="res://control.gd" id="2_rn5ld"]
+[ext_resource type="AudioStream" uid="uid://c3ri5lw3wejdo" path="res://audio/00 - audio - GuitarLess.ogg" id="2_xjpw4"]
+[ext_resource type="AudioStream" uid="uid://un23akfyekmk" path="res://audio/00 - audio - hh.ogg" id="3_5wkjb"]
+[ext_resource type="AudioStream" uid="uid://blbkqecg2ap72" path="res://audio/00 - audio - snare.ogg" id="4_vca71"]
+[ext_resource type="AudioStream" uid="uid://dywjvtfcf11sd" path="res://audio/00 - audio - kick.ogg" id="5_ikitk"]
+[ext_resource type="Script" path="res://audiosync_player.gd" id="7_kqmih"]
+[ext_resource type="Script" path="res://audiointer_player.gd" id="8_kgn0c"]
+[ext_resource type="AudioStream" uid="uid://lwklvhg35mw4" path="res://audio/00 - audio - Drumless.ogg" id="10_i4swc"]
+
+[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_hqte0"]
+stream_count = 5
+stream_0/stream = ExtResource("1_dgvfe")
+stream_0/volume = 0.0
+stream_1/stream = ExtResource("2_phn63")
+stream_1/volume = 0.0
+stream_2/stream = ExtResource("3_5wkjb")
+stream_2/volume = 0.0
+stream_3/stream = ExtResource("4_vca71")
+stream_3/volume = 0.0
+stream_4/stream = ExtResource("5_ikitk")
+stream_4/volume = 0.0
+
+[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_uqr6d"]
+clip_count = 3
+clip_0/name = &"Full"
+clip_0/stream = ExtResource("1_y40j1")
+clip_0/auto_advance = 0
+clip_1/name = &"Drumless"
+clip_1/stream = ExtResource("10_i4swc")
+clip_1/auto_advance = 0
+clip_2/name = &"Guitarless"
+clip_2/stream = ExtResource("2_xjpw4")
+clip_2/auto_advance = 0
+_transitions = {
+Vector2i(-1, -1): {
+"fade_beats": 1,
+"fade_mode": 0,
+"from_time": 0,
+"to_time": 0
+},
+Vector2i(0, 0): {
+"fade_beats": 1,
+"fade_mode": 0,
+"from_time": 0,
+"to_time": 1
+},
+Vector2i(0, 1): {
+"fade_beats": 1,
+"fade_mode": 3,
+"from_time": 2,
+"to_time": 0
+},
+Vector2i(0, 2): {
+"fade_beats": 1,
+"fade_mode": 3,
+"from_time": 2,
+"to_time": 0
+},
+Vector2i(1, -1): {
+"fade_beats": 1,
+"fade_mode": 2,
+"from_time": 0,
+"to_time": 0
+},
+Vector2i(2, -1): {
+"fade_beats": 1,
+"fade_mode": 1,
+"from_time": 0,
+"to_time": 0
+}
+}
+
+[node name="Node" type="Node" node_paths=PackedStringArray("player_to_test", "sync_player", "inter_player")]
+script = ExtResource("1_jdgbb")
+player_to_test = NodePath("AudioSyncPlayer")
+sync_player = NodePath("AudioSyncPlayer")
+inter_player = NodePath("AudioInterPlayer")
+
+[node name="AudioSyncPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamSynchronized_hqte0")
+script = ExtResource("7_kqmih")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_rn5ld")
+
+[node name="Play" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -141.0
+offset_top = 65.0
+offset_right = -51.0
+offset_bottom = 96.0
+grow_horizontal = 2
+text = "Play"
+
+[node name="Pause" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 571.0
+offset_top = 67.0
+offset_right = 626.0
+offset_bottom = 98.0
+toggle_mode = true
+text = "Pause"
+
+[node name="Stop" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 676.0
+offset_top = 68.0
+offset_right = 719.0
+offset_bottom = 99.0
+text = "Stop"
+
+[node name="drumless" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -225.0
+offset_top = 193.0
+offset_right = -109.0
+offset_bottom = 224.0
+grow_horizontal = 2
+text = "DrumLess
+"
+
+[node name="guitarless" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 357.0
+offset_top = 275.0
+offset_right = 448.0
+offset_bottom = 306.0
+text = "GuitarLess"
+
+[node name="full" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 391.0
+offset_top = 339.0
+offset_right = 427.0
+offset_bottom = 370.0
+text = "Full"
+
+[node name="bass" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 683.0
+offset_top = 175.0
+offset_right = 726.0
+offset_bottom = 206.0
+toggle_mode = true
+text = "bass"
+
+[node name="guitar" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 676.0
+offset_top = 230.0
+offset_right = 731.0
+offset_bottom = 261.0
+toggle_mode = true
+text = "guitar
+"
+
+[node name="hh" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 692.0
+offset_top = 279.0
+offset_right = 721.0
+offset_bottom = 310.0
+toggle_mode = true
+text = "hh"
+
+[node name="snare" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 684.0
+offset_top = 334.0
+offset_right = 736.0
+offset_bottom = 365.0
+toggle_mode = true
+text = "snare"
+
+[node name="kick" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 688.0
+offset_top = 403.0
+offset_right = 727.0
+offset_bottom = 434.0
+toggle_mode = true
+text = "kick"
+
+[node name="AudioInterPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamInteractive_uqr6d")
+script = ExtResource("8_kgn0c")
+
+[connection signal="pressed" from="Control/Play" to="." method="_on_play_pressed"]
+[connection signal="toggled" from="Control/Pause" to="." method="_on_pause_toggled"]
+[connection signal="pressed" from="Control/Stop" to="." method="_on_stop_pressed"]
+[connection signal="pressed" from="Control/drumless" to="AudioInterPlayer" method="_on_drumless_pressed"]
+[connection signal="pressed" from="Control/guitarless" to="AudioInterPlayer" method="_on_guitarless_pressed"]
+[connection signal="pressed" from="Control/full" to="AudioInterPlayer" method="_on_full_pressed"]
+[connection signal="toggled" from="Control/bass" to="AudioSyncPlayer" method="_on_bass_toggled"]
+[connection signal="toggled" from="Control/guitar" to="AudioSyncPlayer" method="_on_guitar_toggled"]
+[connection signal="toggled" from="Control/hh" to="AudioSyncPlayer" method="_on_hh_toggled"]
+[connection signal="toggled" from="Control/snare" to="AudioSyncPlayer" method="_on_snare_toggled"]
+[connection signal="toggled" from="Control/kick" to="AudioSyncPlayer" method="_on_kick_toggled"]

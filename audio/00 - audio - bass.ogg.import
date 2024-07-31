@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dsgn7m0dfwaxo"
+path="res://.godot/imported/00 - audio - bass.ogg-6cbc0f00715ef227ae76167f199c9459.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/00 - audio - bass.ogg"
+dest_files=["res://.godot/imported/00 - audio - bass.ogg-6cbc0f00715ef227ae76167f199c9459.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d33hx0nrostss"
+path="res://.godot/imported/00 - audio - Full.ogg-da191c3fdd843f5ff7a69510e7451cec.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/00 - audio - Full.ogg"
+dest_files=["res://.godot/imported/00 - audio - Full.ogg-da191c3fdd843f5ff7a69510e7451cec.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
